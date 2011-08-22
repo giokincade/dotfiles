@@ -1,3 +1,5 @@
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 let g:molokai_original = 0 
 set t_Co=256
 colorscheme molokai 
