@@ -6,6 +6,7 @@ colorscheme molokai
 syntax on
 set ignorecase
 set expandtab
+set nowrap
 set nocompatible
 set autoindent
 set smartindent
@@ -20,3 +21,15 @@ set wildmode=list:longest,full
 "make < > keep selection 
 vnoremap < <gv
 vnoremap > >gv
+
+"ctrlp settings
+""set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class,*.jar,*.json,*.sqlite
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class,*.jar,*.sqllite     " MacOSX/Linux
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_user_command = 'find %s -type f -not -path "*.class"'"
