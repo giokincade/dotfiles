@@ -2,5 +2,6 @@
 
 ln -s -f ~/dotfiles/.vim ~
 ln -s -f ~/dotfiles/.vimrc ~/.vimrc
+ln -s -f ~/dotfiles/.zshrc ~/.zshrc
 cd ~/dotfiles
 git submodule update --init
