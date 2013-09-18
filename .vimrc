@@ -33,4 +33,4 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class,*.jar,*.sqllite     " MacOSX/Li
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-let g:ctrlp_user_command = 'find %s -type f -not -path "*.class"'"
+let g:ctrlp_user_command = 'find %s -type f -not -path "*.class" -not -path "*/tmp/*"'"
