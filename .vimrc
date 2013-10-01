@@ -29,6 +29,9 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_regexp = 1
 
+""turning off delimitMate for scala
+au FileType scala let b:delimitMate_quotes = "\""
+
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class,*.jar,*.sqllite     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 
