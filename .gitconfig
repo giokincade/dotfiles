@@ -1,0 +1,25 @@
+[color]
+        ui = auto
+[core]
+        autocrlf = input
+        safecrlf = true
+        preloadindex = true
+[push]
+        default = tracking
+[user]
+        name = Giovanni Fernandez-Kincade 
+        email = giokincade@gmail.com 
+[alias]
+        ap = add --patch
+        bl = blame -w
+        br = branch
+        ci = commit
+        co = checkout
+        df = diff
+        l = log --graph --decorate
+        lg = log --decorate -p
+        rpull = pull --rebase --stat
+        pullr = pull --rebase
+        st = status
+        unstage = reset
+
