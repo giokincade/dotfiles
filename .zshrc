@@ -15,5 +15,7 @@ export RPROMPT="%{$fg_bold[yellow]%}%m%{$reset_color%}"
 
 alias ls="ls -alsFGh"
 alias g="git"
-alias ack='ACK_PAGER_COLOR="less -x4SRFX" /usr/bin/ack'
+alias ack='ACK_PAGER_COLOR="less -x4SRFX" ack'
+
+
 

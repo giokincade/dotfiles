@@ -4,6 +4,7 @@
         autocrlf = input
         safecrlf = true
         preloadindex = true
+        excludesfile = ~/.gitignore_global
 [push]
         default = tracking
 [user]
