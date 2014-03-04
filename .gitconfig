@@ -5,6 +5,7 @@
         safecrlf = true
         preloadindex = true
         excludesfile = ~/.gitignore_global
+        editor = vim
 [push]
         default = tracking
 [user]
