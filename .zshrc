@@ -17,5 +17,11 @@ alias ls="ls -alsFGh"
 alias g="git"
 alias ack='ACK_PAGER_COLOR="less -x4SRFX" ack'
 
-
-
+# History bits
+HISTFILE=$HOME/.zsh/history 
+HISTSIZE=1200
+SAVEHIST=1000 
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt EXTENDED_HISTORY 
+setopt inc_append_history
+setopt sharehistory
