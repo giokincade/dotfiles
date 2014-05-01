@@ -18,6 +18,7 @@ alias g="git"
 alias ack='ACK_PAGER_COLOR="less -x4SRFX" ack'
 
 # History bits
+mkdir -p $HOME/.zsh
 HISTFILE=$HOME/.zsh/history 
 HISTSIZE=1200
 SAVEHIST=1000 
