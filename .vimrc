@@ -5,6 +5,7 @@ set t_Co=256
 colorscheme molokai 
 syntax on
 set ignorecase
+set smartcase
 set expandtab
 set nowrap
 set nocompatible
@@ -17,6 +18,8 @@ set number
 set backspace=indent,eol,start
 set wildmenu
 set wildmode=list:longest,full
+set visualbell           " don't beep
+set noerrorbells         " don't beep"
 
 "make < > keep selection 
 vnoremap < <gv
