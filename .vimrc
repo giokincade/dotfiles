@@ -31,8 +31,10 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_regexp = 1
 
-""turning off delimitMate for scala
-au FileType scala let b:delimitMate_quotes = "\""
+"Scala settings
+au filetype scala let b:delimitMate_quotes = "\""
+au filetype scala set tabstop=2 
+au filetype scala set shiftwidth=2 
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class,*.jar,*.sqllite,*pyc
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
