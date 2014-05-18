@@ -21,7 +21,7 @@ function prompt_char {
 function collapse_pwd {
     echo $(pwd | sed -e "s,^$HOME,~,")
 }
-export PROMPT='%{$fg[magenta]%}%n%{$reset_color%} @ %{$fg[yellow]%}%m%{$reset_color%}: %{$fg_bold[green]%}$(collapse_pwd)%{$reset_color%}
+export PROMPT='%{$fg[magenta]%}%n%{$reset_color%} @ %{$fg[yellow]%}%M%{$reset_color%}: %{$fg_bold[green]%}$(collapse_pwd)%{$reset_color%}
 $(prompt_char) '
 
 # History bits
