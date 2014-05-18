@@ -38,4 +38,5 @@ setopt sharehistory
 alias ls="ls -alsFGh"
 alias g="git"
 alias ack='ACK_PAGER_COLOR="less -x4SRFX" ack'
+alias resource='source ~/.zshrc'
 
