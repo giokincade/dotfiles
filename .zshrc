@@ -98,7 +98,9 @@ setopt sharehistory
 
 # Shortcuts
 alias ls="ls -alsFGh"
+alias dotfiles="cd ~/dotfiles"
 alias g="git"
 alias ack='ACK_PAGER_COLOR="less -x4SRFX" ack'
+alias ag="ag --pager 'less -x4SRFX' "
 alias resource='source ~/.zshrc'
 
