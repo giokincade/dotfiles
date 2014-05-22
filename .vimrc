@@ -31,11 +31,20 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_regexp = 1
 
+let g:ctrlp_use_caching = 1
+let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'
+" Do not clear filenames cache, to improve CtrlP startup
+" You can manualay clear it by <F5>
+let g:ctrlp_clear_cache_on_exit = 0
+
+if executable("ag")
+  let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden -g ""'
+else
+  let g:ctrlp_user_command = 'find %s -type f -not -path "*.class" -not -path "*.pyc" -not -path "*/tmp/*"'
+endif
+
 "Scala settings
 au filetype scala let b:delimitMate_quotes = "\""
 au filetype scala set tabstop=2 
 au filetype scala set shiftwidth=2 
 
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class,*.jar,*.sqllite,*pyc
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-let g:ctrlp_user_command = 'find %s -type f -not -path "*.class" -not -path "*.pyc" -not -path "*/tmp/*"'"
