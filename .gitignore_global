@@ -6,3 +6,4 @@
 *.swm
 *.swj
 *.sw*
+!*.swift
