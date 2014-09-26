@@ -93,4 +93,5 @@ alias g="git"
 alias ack='ACK_PAGER_COLOR="less -x4SRFX" ack'
 alias ag="ag --pager 'less -x4SRFX' "
 alias resource='source ~/.zshrc'
+alias pjson="python -m json.tool"
 
