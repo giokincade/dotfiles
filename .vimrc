@@ -47,4 +47,9 @@ endif
 au filetype scala let b:delimitMate_quotes = "\""
 au filetype scala set tabstop=2 
 au filetype scala set shiftwidth=2 
+ 
+"Java settings
+au filetype java set tabstop=2 
+au filetype java set shiftwidth=2 
+ 
 
