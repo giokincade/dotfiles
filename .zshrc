@@ -95,8 +95,10 @@ alias ag="ag --pager 'less -x4SRFX' "
 alias resource='source ~/.zshrc'
 alias pjson="python -m json.tool"
 
-if [[ "$(uname)" != "Darwin" ]]; then
+# OS Specific aliases
+if [[ "$(uname)" = "Darwin" ]]; then
+    alias clearderived="rm -rf ~/Library/Developer/Xcode/DerivedData/*"
+else 
     alias pbcopy="ssh `echo $SSH_CLIENT | awk '{print $1}'` pbcopy"
     alias pbpaste="ssh `echo $SSH_CLIENT | awk '{print $1}'` pbpaste"
 fi
-
