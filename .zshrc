@@ -98,6 +98,10 @@ alias pjson="python -m json.tool"
 # OS Specific aliases
 if [[ "$(uname)" = "Darwin" ]]; then
     alias clearderived="rm -rf ~/Library/Developer/Xcode/DerivedData/*"
+    # 20 minutes
+    alias work='sleep 1200; say "stop working";osascript -e '\''display notification "Stop working"'\'
+    # 10 minutes
+    alias chill='sleep 600; say "work dog";osascript -e '\''display notification "Get back to work dawg"'\'
 else 
     alias pbcopy="ssh `echo $SSH_CLIENT | awk '{print $1}'` pbcopy"
     alias pbpaste="ssh `echo $SSH_CLIENT | awk '{print $1}'` pbpaste"
