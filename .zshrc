@@ -94,6 +94,7 @@ alias ack='ACK_PAGER_COLOR="less -x4SRFX" ack'
 alias ag="ag --pager 'less -x4SRFX' "
 alias resource='source ~/.zshrc'
 alias pjson="python -m json.tool"
+alias subu="git submodule sync --recursive && git submodule update --init --recursive"
 
 # OS Specific aliases
 if [[ "$(uname)" = "Darwin" ]]; then
