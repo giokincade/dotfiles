@@ -20,6 +20,3 @@
 [submodule ".vim/bundle/vim-swift"]
 	path = .vim/bundle/vim-swift
 	url = https://github.com/toyamarinyon/vim-swift.git
-[submodule ".vim/bundle/vim-hack"]
-	path = .vim/bundle/vim-hack
-	url = git://github.com/hhvm/vim-hack.git
