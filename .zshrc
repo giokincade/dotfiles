@@ -95,6 +95,9 @@ alias ag="ag --pager 'less -x4SRFX' "
 alias resource='source ~/.zshrc'
 alias pjson="python -m json.tool"
 alias subu="git submodule sync --recursive && git submodule update --init --recursive"
+alias whitespace="sed -e 's/ *$//g' -i '' "
+alias cleandocker="docker rmi \$(docker images -q -f \"dangling=true\"); docker rm \$(docker ps -q -f 'status=exited'); docker volume rm \$(docker volume ls -qf dangling=true)"
+alias dockerstats="docker stats \$(docker ps --format={{.Names}})"
 
 # OS Specific aliases
 if [[ "$(uname)" = "Darwin" ]]; then

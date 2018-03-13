@@ -1,7 +1,7 @@
 [color]
         ui = auto
 [core]
-        autocrlf = input
+	autocrlf = input
         safecrlf = true
         preloadindex = true
         excludesfile = ~/.gitignore_global
