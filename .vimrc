@@ -54,3 +54,5 @@ au filetype java set shiftwidth=2
 
 " Disable the god awful sql completion bullshit
 let g:loaded_sql_completion = 0
+
+autocmd BufNewFile,BufRead Vagrantfile set syntax=ruby
