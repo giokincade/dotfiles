@@ -52,7 +52,10 @@ au filetype scala set shiftwidth=2
 au filetype java set tabstop=2 
 au filetype java set shiftwidth=2 
 
-" Disable the god awful sql completion bullshit
+"Disable the god awful sql completion bullshit
 let g:loaded_sql_completion = 0
 
 autocmd BufNewFile,BufRead Vagrantfile set syntax=ruby
+
+"Clear trailing whitespace 
+autocmd BufWritePre * %s/\s\+$//e
