@@ -5,7 +5,7 @@ if [ -e $HOME/.zsh/$HOST.zsh ]; then
         source $HOME/.zsh/$HOST.zsh
 fi
 
-# Prompt bits 
+# Prompt bits
 autoload -U compinit promptinit
 compinit
 promptinit
@@ -73,16 +73,16 @@ function prompt_char {
 function collapse_pwd {
     echo $(pwd | sed -e "s,^$HOME,~,")
 }
-export PROMPT='%{$fg[magenta]%}%n%{$reset_color%} @ %{$fg[yellow]%}%M%{$reset_color%}: %{$fg_bold[green]%}$(collapse_pwd)%{$reset_color%} $(git_prompt_string)  
+export PROMPT='%{$fg[magenta]%}%n%{$reset_color%} @ %{$fg[yellow]%}%M%{$reset_color%}: %{$fg_bold[green]%}$(collapse_pwd)%{$reset_color%} $(git_prompt_string)
 $(prompt_char) '
 
 # History bits
 mkdir -p $HOME/.zsh
-HISTFILE=$HOME/.zsh/history 
+HISTFILE=$HOME/.zsh/history
 HISTSIZE=1200
-SAVEHIST=1000 
+SAVEHIST=1000
 setopt HIST_EXPIRE_DUPS_FIRST
-setopt EXTENDED_HISTORY 
+setopt EXTENDED_HISTORY
 setopt inc_append_history
 setopt sharehistory
 
@@ -101,12 +101,8 @@ alias dockerstats="docker stats \$(docker ps --format={{.Names}})"
 
 # OS Specific aliases
 if [[ "$(uname)" = "Darwin" ]]; then
-    alias clearderived="rm -rf ~/Library/Developer/Xcode/DerivedData/*"
-    # 25 minutes
-    alias work='sleep 1500; say "stop working";osascript -e '\''display notification "Stop working"'\'
-    # 5 minutes
-    alias chill='sleep 300; say "work dog";osascript -e '\''display notification "Get back to work dawg"'\'
-else 
+    alias flushdns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
+else
     alias pbcopy="ssh `echo $SSH_CLIENT | awk '{print $1}'` pbcopy"
     alias pbpaste="ssh `echo $SSH_CLIENT | awk '{print $1}'` pbpaste"
 fi
