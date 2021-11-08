@@ -4,7 +4,7 @@
 	autocrlf = input
         safecrlf = true
         preloadindex = true
-        excludesfile = ~/.gitignore_global
+	excludesfile = /Users/giokincade/.gitignore_global
         editor = vim
 [push]
         default = tracking
@@ -25,3 +25,5 @@
         st = status
         unstage = reset
 
+[init]
+	defaultBranch = main
