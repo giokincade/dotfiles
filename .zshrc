@@ -100,9 +100,10 @@ alias whitespace="sed -e 's/ *$//g' -i '' "
 alias cleandocker="docker rmi \$(docker images -q -f \"dangling=true\"); docker rm \$(docker ps -q -f 'status=exited'); docker volume rm \$(docker volume ls -qf dangling=true)"
 alias dockerstats="docker stats \$(docker ps --format={{.Names}})"
 
-# OS Specific aliases
+# OS Specific aliases and sources
 if [[ "$(uname)" = "Darwin" ]]; then
     alias flushdns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
+    PATH="/opt/homebrew/bin:$PATH"
 else
     alias pbcopy="ssh `echo $SSH_CLIENT | awk '{print $1}'` pbcopy"
     alias pbpaste="ssh `echo $SSH_CLIENT | awk '{print $1}'` pbpaste"
@@ -113,3 +114,21 @@ if [ -f '/Users/giokincade/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/giokincade/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/giokincade/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# fnm
+FNM_PATH="/opt/homebrew/opt/fnm/bin"
+if [ -d "$FNM_PATH" ]; then
+  eval "$(fnm env --use-on-cd --shell zsh --resolve-engines)"
+fi
+
+# pnpm
+export PNPM_HOME="/Users/giokincade/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

@@ -8,6 +8,7 @@
         editor = vim
 [push]
         default = tracking
+	autoSetupRemote = true
 [user]
         name = Giovanni Fernandez-Kincade 
         email = giokincade@gmail.com 
