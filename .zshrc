@@ -110,10 +110,10 @@ else
 fi
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/giokincade/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/giokincade/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f "$HOME/Downloads/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/Downloads/google-cloud-sdk/path.zsh.inc"; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/giokincade/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/giokincade/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f "$HOME/Downloads/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/Downloads/google-cloud-sdk/completion.zsh.inc"; fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
@@ -126,7 +126,7 @@ if [ -d "$FNM_PATH" ]; then
 fi
 
 # pnpm
-export PNPM_HOME="/Users/giokincade/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
