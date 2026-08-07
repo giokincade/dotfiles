@@ -132,3 +132,12 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# direnv — loads per-directory .envrc files (must stay last: the hook wraps
+# precmd/chpwd and must run after other chpwd hooks such as fnm's --use-on-cd).
+if command -v direnv >/dev/null 2>&1; then
+  eval "$(direnv hook zsh)"
+fi
+
+
+

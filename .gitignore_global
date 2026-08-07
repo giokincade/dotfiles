@@ -7,3 +7,5 @@
 *.swj
 *.sw*
 !*.swift
+
+**/.claude/settings.local.json
