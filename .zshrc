@@ -139,5 +139,13 @@ if command -v direnv >/dev/null 2>&1; then
   eval "$(direnv hook zsh)"
 fi
 
+# Claude Code — use the standalone installer, not a node-version-manager copy.
+# nvm/fnm each install their own global "claude", so the version you get
+# depends on the active node. Pin the self-contained install first on PATH so
+# every shell gets the same claude, independent of the active node version.
+if [ -d "$HOME/.claude/local" ]; then
+  export PATH="$HOME/.claude/local:$PATH"
+fi
+
 
 
